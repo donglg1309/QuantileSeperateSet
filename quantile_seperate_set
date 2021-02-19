@@ -1,0 +1,9 @@
+quantile_seperate_set<-function(x,a,b,c,d)
+{
+        binding_numbers2<-x
+        binding_numbers2[x<=quantile(x,a)]=0
+        binding_numbers2[x>=quantile(x,a)&x<=quantile(x,b)]=10
+        binding_numbers2[x>=quantile(x,b)&x<=quantile(x,c)]=20
+        binding_numbers2[x>=quantile(x,c)&x<=quantile(x,d)]=30
+        return(binding_numbers2)
+}
